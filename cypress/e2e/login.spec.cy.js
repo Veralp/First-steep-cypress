@@ -21,8 +21,8 @@ describe('Orange HRM test', () => {
   }
   it.only('User Info Update success', () => {
     cy.visit('/auth/login')
-    cy.get(selectorList.usernameField).type(userData.userSuccess.username)
-    cy.get(selectorList.passwordField).type(userData.userSuccess.password)
+    cy.get(selectorList.usernameField).clear().type(userData.userSuccess.username)
+    cy.get(selectorList.passwordField).clear().type(userData.userSuccess.password)
     cy.get(selectorList.loginButton).click()
     cy.location('pathname').should('equal','/web/index.php/dashboard/index')
     cy.get(selectorList.dashboardGrid)
@@ -38,6 +38,7 @@ describe('Orange HRM test', () => {
     cy.get(selectorList.dateCloseButton).click()
     cy.get(selectorList.SubmitButton).eq(0).click()
     //cy.get('body').should('contain', 'Successfully Update')
+    cy.get(':nth-child(1) > .oxd-form > .oxd-form-actions > .oxd-button')
     
 
 
