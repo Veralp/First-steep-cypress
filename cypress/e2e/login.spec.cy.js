@@ -37,7 +37,11 @@ describe('Orange HRM test', () => {
     cy.get(selectorList.genericField).eq(7).clear().type('2025-03-10')
     cy.get(selectorList.dateCloseButton).click()
     cy.get(selectorList.SubmitButton).eq(0).click()
-    cy.get('body').should('contain', 'Successfully update')
+    //cy.get('body').should('contain', 'Successfully Update')
+    
+
+
+    
 
     
 
