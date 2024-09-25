@@ -10,7 +10,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "cypress": "^13.13.2"
+    "cypress": "^13.14.2"
   },
   "dependencies": {
     "aggregate-error": "^3.1.0",
